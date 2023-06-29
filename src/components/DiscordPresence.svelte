@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import io from 'socket.io-client';
-	const socket = io('https://api.laith.app');
+	const socket = io('https://api.laith.app', {path: '/presence'});
 
 	const fetchPresence = async () => {
 		const colors: { [key: string]: string } = {
